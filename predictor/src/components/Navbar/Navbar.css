@@ -2,19 +2,22 @@
 .navbar {
   position: sticky;
   top: 0;
-  z-index: 100;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
+  z-index: 100;
+  margin-left: 0px;
+  background:  rgb(5, 4, 51);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid #ccc;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px rgb(1,1,1);
+  display:fixed;
 }
 
 /* Flex container */
 .navbar-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
+  max-width: auto;
+  margin:0%;
+  padding: 0 12px;
   height: 64px;
   display: flex;
   align-items: center;
@@ -30,23 +33,24 @@
 }
 
 .brand-icon {
-  width: 32px;
-  height: 32px;
-  background-color: #0070f3;
-  color: white;
+  width: 50px;
+  height: 50px;
+  background-color: #ffd500;
+  color: rgb(8, 6, 86);
   font-weight: bold;
-  font-size: 16px;
+  font-size: 50px;
   border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left:2px;
 }
 
 .brand-name {
   margin-left: 10px;
-  font-size: 18px;
+  font-size: 40px;
   font-weight: 600;
-  color: #0070f3;
+  color: #ffffff;
 }
 
 /* Desktop nav links */
@@ -61,7 +65,7 @@
   text-decoration: none;
   font-weight: 500;
   color: #333;
-  background-color: transparent;
+  background-color:rgb(255, 255, 255);
   transition: 0.2s;
 }
 
@@ -70,7 +74,7 @@
 }
 
 .nav-button.active {
-  background-color: #0070f3;
+  background-color: #ffd500;
   color: white;
 }
 

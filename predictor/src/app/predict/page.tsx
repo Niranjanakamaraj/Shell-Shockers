@@ -127,10 +127,10 @@ export default function InputPage() {
               <div className="bg-secondary/10 p-4 rounded-lg">
                 <h4 className="font-medium mb-2">CSV Format Requirements:</h4>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• First row must contain headers</li>
-                  <li>• Component fractions must sum to 100%</li>
-                  <li>• All numeric values must be positive</li>
-                  <li>• Maximum file size: 10MB</li>
+                  <li> First row must contain headers</li>
+                  <li> Component fractions must sum to 100%</li>
+                  <li> All numeric values must be positive</li>
+                  <li> Maximum file size: 10MB</li>
                 </ul>
               </div>
             </CardContent>

@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
       <div className="navbar-container">
         <a href="/" className="navbar-brand">
           <div className="brand-icon">S</div>
-          <span className="brand-name">Shell Fuel Blend Tool</span>
+          <span className="brand-name">Shell-Shockers</span>
         </a>
 
         <nav className="navbar-links">
