@@ -1,0 +1,103 @@
+/* Predict Page Styles */
+
+.predict-container {
+  max-width: 1200px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 1.5rem;
+  background: #f7fbff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+}
+
+.predict-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #16213e;
+}
+
+.predict-subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #4a5568;
+  margin-bottom: 2rem;
+}
+
+.predict-upload-box {
+  background: #fff;
+  border: 2px dashed #b6c6e3;
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.predict-upload-box input[type="file"] {
+  margin-top: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.predict-file-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #2d3748;
+  text-align: center;
+}
+
+.predict-download-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #111827;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin: 1rem auto 0 auto;
+}
+.predict-download-btn:hover {
+  background: #2563eb;
+}
+
+.predict-section-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #16213e;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.predict-section-desc {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.predict-req-list {
+  margin: 1.5rem auto 0 auto;
+  max-width: 600px;
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  color: #334155;
+  font-size: 1rem;
+}
+.predict-req-list li {
+  margin-bottom: 0.5rem;
+}

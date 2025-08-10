@@ -1,0 +1,35 @@
+.custom-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Ghost (default) variant */
+.ghost {
+  background-color:white;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.ghost:hover {
+  color: rgb(0, 0, 0);
+  transform: scale(1.1); /* Optional: slight zoom effect */
+}
+
+/* Default (filled) variant */
+.default {
+  background-color: #FFD500;
+  color: rgb(8, 6, 86);
+}
+
+/* Active style (adds highlight) */
+.active {
+  box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.3);
+}
