@@ -6,6 +6,11 @@ import Button from "@/components/ui/button/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card/card"
 import { Input } from "@/components/ui/input/input"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tab/tab"
+<<<<<<< HEAD
+=======
+
+import "./page.css";
+>>>>>>> stephanus
 import { Upload, Download } from "lucide-react"
 
 export default function InputPage() {
@@ -69,6 +74,7 @@ export default function InputPage() {
   }
 
   return (
+<<<<<<< HEAD
     <div className="space-y-6">
       <div className="text-center space-y-2">
         <h1 className="text-3xl font-bold text-primary">Upload Blend Data</h1>
@@ -137,6 +143,61 @@ export default function InputPage() {
           </Card>
         </TabsContent>
       </Tabs>
+=======
+    <div className="predict-container">
+      <div className="predict-title">Upload Blend Data</div>
+      <div className="predict-subtitle">Upload your fuel blend composition in CSV format</div>
+
+      <div className="predict-upload-box">
+        <Upload className="h-12 w-12" style={{ color: '#2563eb', marginBottom: '0.5rem' }} />
+        <div className="predict-section-title">CSV File Upload</div>
+        <div className="predict-section-desc">
+          Upload a CSV file with your blend data. Download the template to see the required format.
+        </div>
+        <Input type="file" accept=".csv" onChange={handleFileChange} className="cursor-pointer" />
+        {csvFile && (
+          <div className="predict-file-info">
+            <span>{csvFile.name}</span>
+          </div>
+        )}
+        <button className="predict-download-btn" onClick={downloadTemplate}>
+          <Download className="h-4 w-4" />
+          Download Template
+        </button>
+        <button
+          className="predict-download-btn"
+          onClick={handlePrediction}
+          disabled={!csvFile}
+          style={{ opacity: !csvFile ? 0.5 : 1 }}
+        >
+          Predict from CSV
+        </button>
+        {predictedFileUrl && (
+          <button
+            className="predict-download-btn"
+            onClick={() => {
+              const a = document.createElement("a")
+              a.href = predictedFileUrl
+              a.download = "predicted_results.csv"
+              a.click()
+            }}
+          >
+            <Download className="h-4 w-4" />
+            Download Prediction
+          </button>
+        )}
+      </div>
+
+      <div className="predict-req-list">
+        <h4 className="font-medium mb-2">CSV Format Requirements:</h4>
+        <ul>
+          <li>First row must contain headers</li>
+          <li>Component fractions must sum to 100%</li>
+          <li>All numeric values must be positive</li>
+          <li>Maximum file size: 10MB</li>
+        </ul>
+      </div>
+>>>>>>> stephanus
     </div>
   )
 }
