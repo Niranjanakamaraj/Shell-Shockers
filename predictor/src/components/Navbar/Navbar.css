@@ -77,13 +77,10 @@
   background-color: #ffd500;
   color: white;
 }
-<<<<<<< HEAD
-=======
 .nav-button.active,
 .nav-button.active:hover {
   transform: scale(1.05);
 }
->>>>>>> stephanus
 
 /* Mobile menu icon */
 .mobile-toggle {

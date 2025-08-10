@@ -6,11 +6,8 @@ import Button from "@/components/ui/button/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card/card"
 import { Input } from "@/components/ui/input/input"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tab/tab"
-<<<<<<< HEAD
-=======
 
 import "./page.css";
->>>>>>> stephanus
 import { Upload, Download } from "lucide-react"
 
 export default function InputPage() {
@@ -74,76 +71,6 @@ export default function InputPage() {
   }
 
   return (
-<<<<<<< HEAD
-    <div className="space-y-6">
-      <div className="text-center space-y-2">
-        <h1 className="text-3xl font-bold text-primary">Upload Blend Data</h1>
-        <p className="text-muted-foreground">Upload your fuel blend composition in CSV format</p>
-      </div>
-
-      <Tabs defaultValue="upload" className="w-full">
-        <TabsList className="w-full">
-          <TabsTrigger value="upload" className="w-full">CSV Upload</TabsTrigger>
-        </TabsList>
-
-        <TabsContent value="upload" className="space-y-4">
-          <Card>
-            <CardHeader>
-              <CardTitle>CSV File Upload</CardTitle>
-              <CardDescription>
-                Upload a CSV file with your blend data. Download the template to see the required format.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="flex flex-col items-center gap-4">
-                <Upload className="h-12 w-12 text-muted-foreground" />
-                <Input type="file" accept=".csv" onChange={handleFileChange} />
-              </div>
-
-              <div className="flex flex-col md:flex-row justify-center gap-4">
-                <Button variant="secondary" onClick={downloadTemplate}>
-                  <Download className="h-4 w-4 mr-2" />
-                  Download Template
-                </Button>
-
-                <Button
-                  onClick={handlePrediction}
-                  disabled={!csvFile}
-                  className="bg-primary hover:bg-primary/90"
-                >
-                  Predict from CSV
-                </Button>
-
-                {predictedFileUrl && (
-                  <Button
-                    variant="outline"
-                    onClick={() => {
-                      const a = document.createElement("a")
-                      a.href = predictedFileUrl
-                      a.download = "predicted_results.csv"
-                      a.click()
-                    }}
-                  >
-                    <Download className="h-4 w-4 mr-2" />
-                    Download Prediction
-                  </Button>
-                )}
-              </div>
-
-              <div className="bg-secondary/10 p-4 rounded-lg">
-                <h4 className="font-medium mb-2">CSV Format Requirements:</h4>
-                <ul className="text-sm text-muted-foreground space-y-1">
-                  <li> First row must contain headers</li>
-                  <li> Component fractions must sum to 100%</li>
-                  <li> All numeric values must be positive</li>
-                  <li> Maximum file size: 10MB</li>
-                </ul>
-              </div>
-            </CardContent>
-          </Card>
-        </TabsContent>
-      </Tabs>
-=======
     <div className="predict-container">
       <div className="predict-title">Upload Blend Data</div>
       <div className="predict-subtitle">Upload your fuel blend composition in CSV format</div>
@@ -197,7 +124,6 @@ export default function InputPage() {
           <li>Maximum file size: 10MB</li>
         </ul>
       </div>
->>>>>>> stephanus
     </div>
   )
 }
