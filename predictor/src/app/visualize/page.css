@@ -57,7 +57,7 @@
 /* Visualize Page Styles */
 
 .visualize-container {
-  max-width: 1200px;
+  max-width:90%;
   margin: 2.5rem auto;
   padding: 2.5rem 1.5rem;
   background: #f7fbff;

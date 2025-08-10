@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+.validation-bg {
+  max-width:90%;
+  margin: 2.5rem auto;
+  padding: 2.5rem 1.5rem;
+  background: #f7fbff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.validation-container {
+  margin: 60px auto 32px auto;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px 0 rgba(30,64,175,0.07);
+  padding: 32px 24px 24px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.validation-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 18px;
+}
+
+.amazing-upload-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 8px 16px;
+  background: #f7f8fa;
+  cursor: pointer;
+  margin: 16px 0 12px 0;
+  width: fit-content;
+  transition: border 0.2s;
+}
+.amazing-upload-label:hover {
+  border: 1.5px solid #ffd600;
+}
+.amazing-upload-input {
+  display: none;
+}
+.amazing-upload-btn {
+  background: linear-gradient(90deg, #ffd600 0%, #e03c31 100%);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin-right: 8px;
+}
+.amazing-upload-label:hover .amazing-upload-btn {
+  background: linear-gradient(90deg, #e03c31 0%, #ffd600 100%);
+}
+.amazing-upload-filename {
+  color: #222;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 4px;
+  min-width: 120px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.validation-result {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.validation-bar-outer {
+  width: 100%;
+  height: 18px;
+  background: #f1f1f1;
+  border-radius: 9px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.validation-bar-inner {
+  height: 100%;
+  background: linear-gradient(90deg, #ffd600 0%, #e03c31 100%);
+  border-radius: 9px 0 0 9px;
+  transition: width 0.4s cubic-bezier(.4,2,.6,1);
+}
+
+.validation-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1e40af;
+}
+
+.validation-missing-cols {
+  margin-top: 8px;
+  color: #e03c31;
+  font-size: 0.98rem;
+  text-align: left;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.validation-missing-cols ul {
+  margin: 4px 0 0 16px;
+  padding: 0;
+}
+
+.validation-missing-cols li {
+  font-size: 0.97rem;
+  line-height: 1.3;
+}

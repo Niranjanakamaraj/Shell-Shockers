@@ -81,12 +81,16 @@ export default function InputPage() {
         <div className="predict-section-desc">
           Upload a CSV file with your blend data. Download the template to see the required format.
         </div>
-        <Input type="file" accept=".csv" onChange={handleFileChange} className="cursor-pointer" />
-        {csvFile && (
-          <div className="predict-file-info">
-            <span>{csvFile.name}</span>
-          </div>
-        )}
+        <label className="amazing-upload-label">
+          <input
+            type="file"
+            accept=".csv"
+            onChange={handleFileChange}
+            className="amazing-upload-input"
+          />
+          <span className="amazing-upload-btn">Choose File</span>
+          <span className="amazing-upload-filename">{csvFile ? csvFile.name : 'No file chosen'}</span>
+        </label>
         <button className="predict-download-btn" onClick={downloadTemplate}>
           <Download className="h-4 w-4" />
           Download Template

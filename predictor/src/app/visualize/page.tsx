@@ -76,14 +76,17 @@ export default function InputDataVisualizationPage() {
         </CardHeader>
         <CardContent>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-            <Input
-              type="file"
-              accept=".csv"
-              onChange={handleFileUpload}
-              className="cursor-pointer"
-              style={{ margin: '0 auto', display: 'block' }}
-              disabled={isLoading}
-            />
+            <label className="amazing-upload-label">
+              <input
+                type="file"
+                accept=".csv"
+                onChange={handleFileUpload}
+                className="amazing-upload-input"
+                disabled={isLoading}
+              />
+              <span className="amazing-upload-btn">Choose File</span>
+              <span className="amazing-upload-filename">{uploadedFile ? uploadedFile.name : 'No file chosen'}</span>
+            </label>
             {isLoading && (
               <div className="visualize-file-info">Processing file...</div>
             )}
