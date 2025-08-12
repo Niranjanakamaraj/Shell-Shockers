@@ -4,7 +4,7 @@ import { useState } from "react"
 import { toast } from "sonner"
 import Button from "@/components/ui/button/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card/card"
-import { Input } from "@/components/ui/input/input"
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tab/tab"
 
 import "./page.css";
