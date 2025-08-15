@@ -19,8 +19,8 @@
   display: none;
 }
 .amazing-upload-btn {
-  background: linear-gradient(90deg, #ffd600 0%, #e03c31 100%);
-  color: #fff;
+  background:#ffd500;
+  color: #16213e;
   font-weight: 700;
   border: none;
   border-radius: 6px;
@@ -31,7 +31,8 @@
   margin-right: 8px;
 }
 .amazing-upload-label:hover .amazing-upload-btn {
-  background: linear-gradient(90deg, #e03c31 0%, #ffd600 100%);
+  background:#16213e;
+  color:#ffd600;
 }
 .amazing-upload-filename {
   color: #222;

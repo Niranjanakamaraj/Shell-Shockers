@@ -3,14 +3,13 @@
 import { useState, useCallback } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card/card'
 import Button from '@/components/ui/button/button'
-import { Input }  from '@/components/ui/input/input'
-import { Badge}  from '@/components/ui/badge'
+import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import { Upload, Download, FileText, Grid3X3 } from 'lucide-react'
 import "./page.css";
 import VisualizationSelector from '@/components/visualization-selector'
 import DataTable from '@/components/data-table'
-import {parseCSV }  from '@/lib/csv-parser'
+import { parseCSV } from '@/lib/csv-parser'
 
 export default function InputDataVisualizationPage() {
   const [uploadedFile, setUploadedFile] = useState<File | null>(null)
@@ -26,7 +25,7 @@ export default function InputDataVisualizationPage() {
         setUploadedFile(file)
         const parsedData = await parseCSV(file)
         setData(parsedData)
-        setSelectedVisualization(null) // Reset visualization selection
+        setSelectedVisualization(null)
       } catch (error) {
         console.error('Error parsing file:', error)
         alert('Error parsing file. Please ensure it\'s a valid CSV file.')
@@ -42,12 +41,12 @@ export default function InputDataVisualizationPage() {
 
   const handleExportData = useCallback(() => {
     if (data.length === 0) return
-    
+
     const csvContent = [
       Object.keys(data[0]).join(','),
       ...data.map(row => Object.values(row).join(','))
     ].join('\n')
-    
+
     const blob = new Blob([csvContent], { type: 'text/csv' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
@@ -66,42 +65,36 @@ export default function InputDataVisualizationPage() {
       {/* File Upload Section */}
       <Card className="visualize-upload-box">
         <CardHeader>
-          <CardTitle className="visualize-card-title visualize-card-title-center">
-            <Upload className="h-5 w-5" />
-            Upload Data File
+          <CardTitle className="text-center flex flex-col items-center gap-2">
+            <Upload className="upload-icon-large" />
+            Upload your CSV file to start visualizing
           </CardTitle>
-          <CardDescription className="visualize-card-desc visualize-card-desc-center">
-            Upload your CSV file to start visualizing your data
-          </CardDescription>
         </CardHeader>
-        <CardContent>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-            <label className="amazing-upload-label">
-              <input
-                type="file"
-                accept=".csv"
-                onChange={handleFileUpload}
-                className="amazing-upload-input"
-                disabled={isLoading}
-              />
-              <span className="amazing-upload-btn">Choose File</span>
-              <span className="amazing-upload-filename">{uploadedFile ? uploadedFile.name : 'No file chosen'}</span>
-            </label>
-            {isLoading && (
-              <div className="visualize-file-info">Processing file...</div>
-            )}
-            {uploadedFile && data.length > 0 && (
-              <div className="visualize-file-info">
-                <Badge className="flex items-center gap-1">
-                  <FileText className="h-3 w-3" />
-                  {uploadedFile.name}
-                </Badge>
-                <span>
-                  {data.length} rows, {Object.keys(data[0]).length} columns loaded
-                </span>
-              </div>
-            )}
+        <CardContent className="flex flex-col items-center gap-3">
+          <label className="fancy-upload-label">
+            <input
+              type="file"
+              accept=".csv"
+              onChange={handleFileUpload}
+              className="fancy-upload-input"
+              disabled={isLoading}
+            />
+            <span className="fancy-upload-btn">Choose File</span>
+            <div className="visualize-file-info">
+            <FileText className="h-3 w-3" />
+            {uploadedFile ? uploadedFile.name : "No file chosen"}
           </div>
+          </label>
+          {isLoading && (
+            <div className="visualize-file-info">Processing file...</div>
+          )}
+          {uploadedFile && data.length > 0 && (
+            <div className="visualize-file-info flex flex-col items-center gap-1">
+              <span>
+                {data.length} rows, {Object.keys(data[0]).length} columns loaded
+              </span>
+            </div>
+          )}
         </CardContent>
       </Card>
 
