@@ -116,12 +116,13 @@ html, body, .separate-bg {
   gap: 32px;
   margin-bottom: 32px;
 }
+
 .feature-card {
   align-items: center;
   text-align: center;
   min-width: 240px;
   max-width: 320px;
-  background: #fff;
+  background: #d9ecff83;
   border-radius: 18px;
   box-shadow: 0 4px 24px 0 rgba(30,64,175,0.07);
   padding: 32px 24px 24px 24px;
