@@ -40,7 +40,23 @@ export default function Help() {
         {activeTab === "faq" && <FAQ />}
         {activeTab === "samples" && <Samples />}
       </div>
+      <div className="demo-video-section">
+  <h2 className="demo-video-title">🎬 Watch Our Quick Demo</h2>
+  <p className="demo-video-desc">
+    Learn how to upload your blend, predict properties, and explore visualizations with a step-by-step video guide.
+  </p>
+  <a 
+    href="https://www.youtube.com/your-video-link" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="demo-video-btn"
+  >
+    Watch Demo on YouTube<br/>
+    (https://www.youtube.com/your-video-link)
+  </a>
+</div>
     </div>
+    
   );
 }
 
@@ -185,3 +201,4 @@ function Samples() {
     </div>
   );
 }
+
