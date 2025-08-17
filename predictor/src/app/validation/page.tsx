@@ -42,8 +42,8 @@ export default function ValidationPage() {
 
   return (
     <div className="upload-container">
-      <div className="upload-title">CSV Format Validation</div>
-      <div className="upload-subtitle">Upload your CSV to check if it matches the required format</div>
+      <div className="upload-title">FUEL BLEND CSV VALIDATION</div>
+      <div className="upload-subtitle">Upload your CSV to ensure it has the correct format for blend property prediction</div>
 
       <div className="upload-box">
         <label className="upload-file-label">
@@ -55,11 +55,7 @@ export default function ValidationPage() {
           />
             <Upload className="upload-icon-large" />
           <span className="upload-text">Drag & Drop or</span>
-          <span className="upload-choose-btn">Choose File</span>
-          <div className="visualize-file-info">
-            <FileText className="h-3 w-3" />
-            {userColumns.length > 0 ? userColumns.join(", ") : "No file chosen"}
-          </div>
+          <span className="upload-choose-btn">Select File</span>
           {userColumns.length > 0 && (
             <span className="upload-filename">{userColumns.join(", ")}</span>
           )}
@@ -68,7 +64,7 @@ export default function ValidationPage() {
 
       {matchPercent !== null && (
         <div className="requirements-box">
-          <h4>Validation Result</h4>
+          <h4>Validation Results</h4>
           <div className="validation-bar-outer">
             <div
               className="validation-bar-inner"
@@ -76,12 +72,12 @@ export default function ValidationPage() {
             ></div>
           </div>
           <p className="validation-label">
-            {matchPercent}% match ({matchCount} of {requiredColumns.length} columns)
+            {matchPercent}% Column match :({matchCount} of {requiredColumns.length} columns)
           </p>
 
           {matchPercent < 100 && (
             <div className="validation-missing-cols">
-              <span>Missing columns:</span>
+              <span>Missing required columns:</span>
               <ul>
                 {requiredColumns
                   .filter((col) => !userColumns.includes(col))

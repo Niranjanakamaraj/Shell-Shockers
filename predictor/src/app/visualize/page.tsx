@@ -59,15 +59,15 @@ export default function InputDataVisualizationPage() {
   return (
     <div className="visualize-container">
       {/* Header */}
-      <div className="visualize-title">Input Data Visualization</div>
-      <div className="visualize-subtitle">Interactive exploration of uploaded input files</div>
+      <div className="visualize-title">FUEL BLEND INPUT DATA EXPLORER</div>
+      <div className="visualize-subtitle">Upload and interactively explore your fuel blend input CSV files</div>
 
       {/* File Upload Section */}
       <Card className="visualize-upload-box">
         <CardHeader>
           <CardTitle className="text-center flex flex-col items-center gap-2">
             <Upload className="upload-icon-large" />
-            Upload your CSV file to start visualizing
+            Upload your CSV file to start blend property analysis
           </CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col items-center gap-3">
@@ -79,14 +79,14 @@ export default function InputDataVisualizationPage() {
               className="fancy-upload-input"
               disabled={isLoading}
             />
-            <span className="fancy-upload-btn">Choose File</span>
+            <span className="fancy-upload-btn">Select CSV</span>
             <div className="visualize-file-info">
             <FileText className="h-3 w-3" />
-            {uploadedFile ? uploadedFile.name : "No file chosen"}
+            {uploadedFile ? uploadedFile.name : "No file uploaded"}
           </div>
           </label>
           {isLoading && (
-            <div className="visualize-file-info">Processing file...</div>
+            <div className="visualize-file-info">Processing blend data...</div>
           )}
           {uploadedFile && data.length > 0 && (
             <div className="visualize-file-info flex flex-col items-center gap-1">
@@ -121,15 +121,14 @@ export default function InputDataVisualizationPage() {
             <CardHeader>
               <CardTitle className="visualize-table-title visualize-table-title-center">
                 <div className="flex items-center gap-2 visualize-table-title-center">
-                  <Grid3X3 className="h-5 w-5" />
-                  Complete Data Table
+                  Uploaded Fuel Blend Data
                   <span className="visualize-table-export-center">
                     <button
                       className="visualize-export-btn"
                       onClick={handleExportData}
                     >
                       <Download className="h-4 w-4" />
-                      Export CSV
+                      Download visualization
                     </button>
                   </span>
                 </div>

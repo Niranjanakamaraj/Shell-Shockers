@@ -30,31 +30,31 @@ export default function VisualizationSelector({ selectedVisualization, onVisuali
           onClick={() => onVisualizationToggle("stacked-bar")}
           className={`visualize-selector-btn${selectedVisualization === "stacked-bar" ? " selected" : ""}`}
         >
-          Stacked Bar
+          Component Fractions
         </button>
         <button
           onClick={() => onVisualizationToggle("box-plot")}
           className={`visualize-selector-btn${selectedVisualization === "box-plot" ? " selected" : ""}`}
         >
-          Box Plot
+        Property Distribution
         </button>
         <button
           onClick={() => onVisualizationToggle("correlation-matrix")}
           className={`visualize-selector-btn${selectedVisualization === "correlation-matrix" ? " selected" : ""}`}
         >
-          Correlation Matrix
+         Property Correlations
         </button>
         <button
           onClick={() => onVisualizationToggle("pair-plot")}
           className={`visualize-selector-btn${selectedVisualization === "pair-plot" ? " selected" : ""}`}
         >
-          Pair Plot
+          Pairwise Relationships
         </button>
         <button
           onClick={() => onVisualizationToggle("dimensionality-reduction")}
           className={`visualize-selector-btn${selectedVisualization === "dimensionality-reduction" ? " selected" : ""}`}
         >
-          Dimensionality Reduction
+          Blend Projection
         </button>
       </div>
 
@@ -68,8 +68,20 @@ export default function VisualizationSelector({ selectedVisualization, onVisuali
           <DimensionalityReduction data={data} />
         )}
         {!selectedVisualization && (
-          <p className="text-gray-500">Select a visualization to display.</p>
-        )}
+  <p style={{
+    color: '#16213e',   // gray-500
+    fontSize: '30px',
+    border: 'none!important',
+    marginTop: '10px',
+    outline: 'none !important',       // remove any outline
+    boxShadow: 'none !important',
+    textAlign: 'center',
+    background: 'transparent' 
+  }}
+  tabIndex={-1} >
+    Select a visualization to explore your fuel blend data.
+  </p>
+)}
       </div>
     </div>
   );

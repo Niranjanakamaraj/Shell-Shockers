@@ -21,8 +21,7 @@ export default function Home() {
           Shell Fuel Blend Prediction Tool
         </h1>
         <div className="separate-subtitle">
-          Advanced machine learning-powered tool for predicting fuel blend properties.<br />
-          Optimize your fuel compositions with precision and confidence.
+         <b> Predict key fuel blend properties, optimize compositions, and make data-driven decisions with precision.</b>
         </div>
         <div className="separate-btn-row">
           <button className="separate-btn-primary" onClick={() => router.push('/predict')}>Get Started →</button>
@@ -36,8 +35,8 @@ export default function Home() {
         <div className="separate-card feature-card">
           <div className="separate-card-icon red"><span role="img" aria-label="upload">⤴️</span></div>
           <div className="separate-card-title">Input Validation</div>
-          <div className="separate-card-desc">Check input CSV format with automatic validation before predicting</div>
-          <button className="separate-card-action amazing" onClick={() => router.push('/validation')}>Start Input</button>
+          <div className="separate-card-desc">Check your CSV inputs for correct format before predicting.</div>
+          <button className="separate-card-action amazing" onClick={() => router.push('/validation')}>Start Validation</button>
         </div>
         {/* Predictions */}
         <div className="separate-card feature-card">
@@ -50,21 +49,21 @@ export default function Home() {
         <div className="separate-card feature-card">
           <div className="separate-card-icon red"><span role="img" aria-label="bar chart">📊</span></div>
           <div className="separate-card-title">Visualization</div>
-          <div className="separate-card-desc">Interactive charts and dashboards for blend analysis</div>
+          <div className="separate-card-desc">Explore interactive charts and dashboards for blend analysis and comparisons.</div>
           <button className="separate-card-action amazing" onClick={() => router.push('/visualize')}>Open Dashboard</button>
         </div>
         {/* Quick Start */}
         <div className="separate-card feature-card">
           <div className="separate-card-icon yellow"><span role="img" aria-label="csv">📄<span className="csv-label">CSV</span></span></div>
           <div className="separate-card-title">Quick Start</div>
-          <div className="separate-card-desc">Download sample CSV and start instantly</div>
-          <button className="separate-card-action amazing quick" onClick={handleDownload}>Download Sample</button>
+          <div className="separate-card-desc">Download a sample CSV and begin predicting immediately.</div>
+          <button className="separate-card-action amazing quick" onClick={handleDownload}>Download Sample CSV</button>
         </div>
         {/* Documentation */}
         <div className="separate-card feature-card">
           <div className="separate-card-icon red"><span role="img" aria-label="docs">📄</span></div>
           <div className="separate-card-title">Documentation</div>
-          <div className="separate-card-desc">Comprehensive user guide and API reference</div>
+          <div className="separate-card-desc">Comprehensive user guide</div>
           <button className="separate-card-action amazing doc" onClick={() => router.push('/help')}>Read Docs</button>
         </div>
       </div>
@@ -80,13 +79,13 @@ export default function Home() {
         </div>
         <div className="whyuse-feature-card center">
           <div className="whyuse-feature-icon yellow">✨</div>
-          <div className="whyuse-feature-title yellow">Easy to Use</div>
-          <div className="whyuse-feature-desc">Intuitive interface with validation and error handling</div>
+          <div className="whyuse-feature-title yellow">Intuitive Interface</div>
+          <div className="whyuse-feature-desc">Simple upload, validation, and prediction workflow</div>
         </div>
         <div className="whyuse-feature-card">
           <div className="whyuse-feature-icon red">📊</div>
           <div className="whyuse-feature-title red">Comprehensive Analysis</div>
-          <div className="whyuse-feature-desc">Visual dashboards and scenario exploration tools</div>
+          <div className="whyuse-feature-desc">Visual dashboards let you explore trends and scenarios quickly</div>
         </div>
       </div>
     </div>

@@ -205,7 +205,7 @@ margin-top:1rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 22%;
+  width: 17%;
   white-space: nowrap; /* prevent text from breaking */
 }
 @keyframes shake {    0% { transform: translateX(0%) rotate(0deg); }
