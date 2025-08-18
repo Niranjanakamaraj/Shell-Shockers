@@ -52,7 +52,6 @@ export default function Help() {
     className="demo-video-btn"
   >
     Watch Demo on YouTube<br/>
-    (https://www.youtube.com/your-video-link)
   </a>
 </div>
     </div>
