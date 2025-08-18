@@ -1,0 +1,227 @@
+
+/* Help/Documentation Page Styles */
+
+.doc-bg {
+  background: #ddedff;
+  min-height: 100vh;
+  padding: 40px 0 60px 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+.doc-title {
+  color: #16213e;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.doc-subtitle {
+  color: #4a5568;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.doc-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.doc-tab {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background:#16213e;
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.doc-tab.active, .doc-tab:hover {
+  background: #ffd500;
+  color: #16213e;
+}
+
+.doc-content {
+  max-width: 90%;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+  padding: 2.5rem 2rem 2rem 2rem;
+}
+
+.doc-section-title {
+  color: #16213e;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  text-align: center !important;
+}
+
+.doc-quickstart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.doc-quickstart-list li {
+  margin-bottom: 1.2rem;
+  font-size: 1.08rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.doc-step-num {
+  background: #ffd500;
+  color: #16213e;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  font-size: 1.1rem;
+}
+
+.doc-feature-list {
+  list-style: disc inside;
+  color: #334155;
+  font-size: 1.08rem;
+  margin-left: 1.5rem;
+}
+
+.doc-faq-list {
+  list-style: none;
+  padding: 0;
+  color: #334155;
+  font-size: 1.08rem;
+}
+
+.doc-faq-list li {
+  margin-bottom: 1.2rem;
+}
+
+.doc-sample-row {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.doc-sample-col {
+  flex: 1;
+}
+
+.doc-download-btn {
+  display: inline-block;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1.2rem;
+  background: #ffd500;
+  color: #16213e;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.doc-download-btn:hover {
+  background: #16213e;
+  color: #fff;
+}
+
+.doc-csv-example {
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 1.2rem;
+  font-size: 1.02rem;
+  margin-top: 1.5rem;
+}
+
+.doc-csv-example pre {
+  max-width: 50% !important;
+  background: none;
+  color: #222;
+  font-size: 1.02rem;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 700px) {
+  .doc-content {
+    padding: 1.2rem 0.5rem;
+  }
+  .doc-sample-row {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}
+
+.userguide-item {
+  margin-bottom: 16px;
+}
+
+.userguide-desc {
+  background-color: #ddedff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #b5d0f2;
+  margin-top: 4px;
+  line-height: 1.6;
+}
+
+.demo-video-section {
+  margin-top: 50px;
+  margin-left: 4%;
+  background: #ffd500; /* highlighted pale yellow */
+  max-width: 90%;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  animation: pulse 2s infinite;
+}
+
+.demo-video-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #16213e;
+  margin-bottom: 0.5rem;
+}
+
+.demo-video-desc {
+  font-size: 1.1rem;
+  color: #16213e;
+  margin-bottom: 1rem;
+}
+
+.demo-video-btn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background: #16213e;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.demo-video-btn:hover {
+  background: #16213ec7;
+  transform: scale(1.05);
+}
+
+/* Subtle pulse animation for section */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
