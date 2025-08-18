@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import './Navbar.css';
 import Button from '@/components/ui/button/button';
-import { Menu, Home, LineChart, HelpCircle, Brain, CheckCircle } from 'lucide-react';
+import { Menu, Home, LineChart, HelpCircle, Brain, CheckCircle, Cpu } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +15,7 @@ const Navbar: React.FC = () => {
     { name: 'Validation', href: '/validation', icon: CheckCircle },
     { name: 'Predict', href: '/predict', icon: Brain },
     { name: 'Visualize', href: '/visualize', icon: LineChart },
+     { name: 'Train Model', href: '/train', icon: Cpu }, // ✅ Unique icon for Train Model
     { name: 'Help', href: '/help', icon: HelpCircle },
   ];
 
