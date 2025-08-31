@@ -702,3 +702,4 @@ export default function Train() {
     </div>
   </div>
 );
+}
