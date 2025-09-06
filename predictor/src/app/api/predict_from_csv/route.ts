@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
         "content-type": req.headers.get("content-type") || "",
       },
       body: req.body, // raw stream
-      duplex: "half" as any, // required in Node fetch for streaming
+      duplex: "half", // required in Node fetch for streaming
     })
 
     console.log(`Backend response status: ${backendRes.status}`)
@@ -61,15 +61,13 @@ export async function POST(req: NextRequest) {
         headers: { "content-type": "application/json" },
       })
     }
-  } catch (error) {
-    console.error("Error connecting to backend:", error)
-    
-    return new Response(JSON.stringify({
+  } catch (error: unknown) {
+  return new Response(
+    JSON.stringify({
       error: "Failed to connect to backend",
-      details: error instanceof Error ? error.message : "Unknown error"
-    }), {
-      status: 500,
-      headers: { "content-type": "application/json" },
-    })
-  }
+      details: error instanceof Error ? error.message : "Unknown error",
+    }),
+    { status: 500, headers: { "content-type": "application/json" } }
+  )
+}
 }

@@ -8,8 +8,13 @@ import "./page.css";
 // ✅ Dynamically import Plotly so it's not used during SSR
 const Plot = dynamic(() => import("react-plotly.js"), { ssr: false });
 
+// --- Define CSV row type ---
+type BlendRow = {
+  [key: string]: string | number; // all columns can be string or number
+};
+
 export default function OutputPage() {
-  const [data, setData] = useState<any[]>([]);
+  const [data, setData] = useState<BlendRow[]>([]); // ✅ updated type
   const [selectedRow, setSelectedRow] = useState(0);
 
   // Load CSV from /public
@@ -87,21 +92,22 @@ export default function OutputPage() {
     <div className="output-container">
       <h1 className="page-title">Visualization Dashboard</h1>
 
-{/* Row Selector */}
-<div className="row-selector">
-  <label className="row-label">Select Row:</label>
-  <select
-    value={selectedRow}
-    onChange={(e) => setSelectedRow(Number(e.target.value))}
-    className="row-select"
-  >
-    {data.map((_, i) => (
-      <option key={i} value={i}>
-        Row {i + 1}
-      </option>
-    ))}
-  </select>
-</div>
+      {/* Row Selector */}
+      <div className="row-selector">
+        <label className="row-label">Select Row:</label>
+        <select
+          value={selectedRow}
+          onChange={(e) => setSelectedRow(Number(e.target.value))}
+          className="row-select"
+        >
+          {data.map((_, i) => (
+            <option key={i} value={i}>
+              Row {i + 1}
+            </option>
+          ))}
+        </select>
+      </div>
+
       <div className="chart-card">
         <h2>Bar Chart</h2>
         <p>
@@ -116,21 +122,21 @@ export default function OutputPage() {
       <div className="chart-card">
         <h2>Parallel Coordinates</h2>
     
-          <b> Each blend property is placed on a vertical
+        <b> Each blend property is placed on a vertical
           axis, and the row values are connected across axes.</b> 
          
         <Plot data={parallelData} layout={{ height: 400 }} /><br />
-         <b> Helps visualize relationships and patterns
+        <b> Helps visualize relationships and patterns
           across all rows simultaneously</b>.
       </div>
 
       <div className="chart-card">
         <h2>Radar Chart</h2>
       
-          <b>Plots all blend properties in a circular layout
+        <b>Plots all blend properties in a circular layout
           for the selected row.</b>  <br />
           
-         <Plot
+        <Plot
           data={radarData}
           layout={{
             polar: { radialaxis: { visible: true } },
@@ -138,19 +144,19 @@ export default function OutputPage() {
             height: 400,
           }}
         /><br />
-<b>You can easily spot balance or imbalance —
+        <b>You can easily spot balance or imbalance —
           e.g., if one property spikes much higher, it shows asymmetry.
         </b> 
       </div>
 
       <div className="chart-card">
         <h2>Pie Chart</h2>
-          <b> Displays the percentage contribution of each blend property for the selected row.</b>
+        <b> Displays the percentage contribution of each blend property for the selected row.</b>
         <br />
          
         <Plot data={pieData} layout={{ height: 400 }} />
         <br />
-         <b> Great for showing distribution — which
+        <b> Great for showing distribution — which
           properties take up most of the “blend composition”.</b>
       </div>
     </div>

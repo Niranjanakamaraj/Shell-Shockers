@@ -1,11 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { useRouter } from "next/navigation";
 import "./page.css";
 
 export default function Home() {
   const router = useRouter();
-  const handleDownload = () => {
+  const handleDownload = (file: File | null) => => {
     const link = document.createElement('a');
     link.href = '/sample.csv';
     link.download = 'sample.csv';
